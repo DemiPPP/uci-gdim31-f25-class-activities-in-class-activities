@@ -22,6 +22,12 @@ We use float for r, g, and b because RGB color values range from 0 to 1 and need
 ## Activity 3: methods coding activity
 Every time the fast ball bounces, we multiply its color by 1.5. This value stacks on each collision. Repeated multiplication pushes the RGB color values far above 1, so the ball becomes extremely bright after many bounces.
 
+### W4
+1. I added Rigidbody to SoccerBall and Cat because they are moving physics objects. Only the Goal collider uses Is Trigger. Unity trigger events require one trigger collider and one non-trigger collider with a Rigidbody. Ground and walls use normal colliders without Is Trigger for physical collision and bouncing.
+
+2. Initial testing had multiple issues: missing collider on walls and ground, Is Trigger not enabled on Goal, missing inspector references for UI/particles, null reference errors on Cat’s animator and rigidbody. I added colliders to static objects, enabled IsTrigger on Goal, fixed object tags, and assigned all required references in the inspector. After fixes, the debug message only prints on goal detection, walls bounce the ball and cat, score and timer update correctly on scoring.
+
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 

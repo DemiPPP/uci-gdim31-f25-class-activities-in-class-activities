@@ -55,7 +55,7 @@ public class BallW3 : MonoBehaviour
     {
         // write the method body here!
         float aver = ( X + Y )/2;
-        if(aver>_speedThreshold)
+        if(aver > _speedThreshold)
         {
             return 1.5f;
         }
