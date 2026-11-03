@@ -27,6 +27,23 @@ Every time the fast ball bounces, we multiply its color by 1.5. This value stack
 
 2. Initial testing had multiple issues: missing collider on walls and ground, Is Trigger not enabled on Goal, missing inspector references for UI/particles, null reference errors on Cat’s animator and rigidbody. I added colliders to static objects, enabled IsTrigger on Goal, fixed object tags, and assigned all required references in the inspector. After fixes, the debug message only prints on goal detection, walls bounce the ball and cat, score and timer update correctly on scoring.
 
+### DeerW5 — Design Notes
+
+## 1. Member variables
+
+The class needs a `Transform` for the target and a `NavMeshAgent` for the deer. I will use `[SerializeField]` so I can assign the target in the Inspector.
+
+## 2. Methods
+
+I only need `Start()` because the deer only needs to set its destination once when the game starts. `Update()` is not needed.
+
+## 3. What the method does
+
+`Start()` gets the NavMeshAgent using `GetComponent<NavMeshAgent>()` and uses `SetDestination()` to make the deer walk toward the target.
+
+**Testing plan:**
+
+Attach the script to Deer, drag the red mushroom into the Target field, and press Play to see if the deer moves toward it.
 
 ## Open-Source Assets
 ### W1
