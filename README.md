@@ -45,6 +45,21 @@ I only need `Start()` because the deer only needs to set its destination once wh
 
 Attach the script to Deer, drag the red mushroom into the Target field, and press Play to see if the deer moves toward it.
 
+### W7
+
+## Activity 1: Class Resource Guide
+
+I was responsible for the Math category.
+
+Group Google Doc: 
+https://docs.google.com/document/d/1aeLK5I-99IDjuatIuVXIrAsnugJpk2Gnpb_A2gVelQQ/edit?usp=sharing
+
+## Activity 2: BatW6 Design Notes
+
+The class needs a speed variable, a Transform for the cat, and a bool to track whether the bat is chasing.
+
+Update() moves the bat toward the cat using Vector3.MoveTowards() when chasing is active. The public methods StartChasing() and StopChasing() change the bool so BatManager can control each bat based on its distance from the cat.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
