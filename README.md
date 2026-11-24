@@ -64,6 +64,10 @@ Update() moves the bat toward the cat using Vector3.MoveTowards() when chasing i
 
 The code in Step 2 used `Vector3.forward`, which always points forward in world space. Because of this, the Muskrat did not move in the direction it was facing after rotating. I replaced it with `transform.forward` so the movement follows the Muskrat’s local forward direction.
 
+## W9
+
+Today in class, I chose the 2D platformer for my final project and created a bubble diagram to plan the relationships between different GameObjects and Components. I opened the project in Unity, explored the provided assets, and started designing an indoor environment. I created a Grid, set up Tilemaps for the background, platforms, and decorations, and learned how to use the Tile Palette to paint walls. I also encountered some problems with sprite sizes and slicing, so I experimented with different settings to understand how Tilemaps work. My next step is to finish the room design and implement player movement and jumping.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
